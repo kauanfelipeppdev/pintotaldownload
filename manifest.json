@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "PinTotalDownload",
+  "version": "1.0.0",
+  "description": "Baixe pastas (boards) inteiras do Pinterest, incluindo seções, com um clique.",
+  "permissions": ["downloads", "storage", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "PinTotalDownload",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pinterest.com/*",
+        "https://*.pinterest.com/*",
+        "https://*.pinterest.com.br/*",
+        "https://*.pinterest.pt/*",
+        "https://*.pinterest.co.uk/*",
+        "https://*.pinterest.ca/*",
+        "https://*.pinterest.com.au/*",
+        "https://*.pinterest.de/*",
+        "https://*.pinterest.fr/*",
+        "https://*.pinterest.es/*",
+        "https://*.pinterest.it/*",
+        "https://*.pinterest.com.mx/*",
+        "https://*.pinterest.jp/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

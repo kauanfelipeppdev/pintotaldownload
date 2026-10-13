@@ -1,0 +1,46 @@
+.ptd-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 88px;
+  z-index: 2147483646;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #e60023;
+  color: #fff;
+  font: 600 15px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.ptd-fab:hover { background: #ad081b; transform: translateY(-1px); }
+.ptd-fab:disabled { background: #767676; cursor: progress; transform: none; }
+
+.ptd-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 148px;
+  z-index: 2147483647;
+  width: 320px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #fff;
+  color: #111;
+  font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
+  display: none;
+}
+.ptd-panel.ptd-show { display: block; }
+.ptd-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.ptd-close {
+  border: none; background: none; font-size: 20px; line-height: 1; cursor: pointer; color: #555;
+}
+.ptd-text { white-space: pre-line; margin-bottom: 10px; }
+.ptd-panel.ptd-error .ptd-text { color: #b00020; }
+.ptd-bar { height: 6px; border-radius: 3px; background: #efefef; overflow: hidden; margin-bottom: 10px; }
+.ptd-bar > div { height: 100%; width: 0; background: #e60023; transition: width 0.2s ease; }
+.ptd-cancel {
+  border: none; border-radius: 999px; padding: 8px 14px; background: #efefef; color: #111;
+  font-weight: 600; cursor: pointer;
+}
+.ptd-cancel:hover { background: #e2e2e2; }
